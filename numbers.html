@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Jura:wght@300..700&family=Nabla&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <style>body {
+      margin: 0;
+      padding-top: 40px;
+      box-sizing: border-box;
+      font-family: "Jura", sans-serif;
+    }
+    
+    .container {
+      width: 90%;
+      overflow: hidden;
+      
+      margin: 0 auto;
+      
+    }
+    
+    .slider {
+      display: flex;
+      border: -1px 1px 10px,rgba(34, 25, 25, 0.5)
+      transition: transform 0.5s ease-in-out;
+    
+    }
+    
+    .slides {
+      flex: 0 0 100%;
+      min-height: 70vh;
+      
+      justify-content: center;
+      align-items: center;
+      
+      border: -1px 1px 10px,rgba(34, 25, 25, 0.5)
+      border-radius: 40px;
+      
+    }
+    
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    button {
+      margin: 0 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border-radius: ;
+    }
+    
+    /* Media query for smaller screens */
+    @media (max-width: 600px) {
+      .slides {
+        height: 70vh;
+        
+      }
+    
+      button {
+        padding: 8px 16px;
+        font-size: 0.9em;
+      }
+    }
+    .inner{
+      padding-right: 10px;
+      height: 100%;
+      width: 100%;
+      text-align: center;
+      transition: transform 0.5s ease-in-out;
+      background-color: bisque;
+      justify-content: center;
+    }
+    button {
+      background-color: #DDA15E;
+      border-color: #78b885;
+      margin: 10px;
+      font-size: 20px;
+      align-items: center;
+      border-radius: 10px;
+      width: 100px;
+      height: 50px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    button:active {
+      background-color: #283618; /* Green background color */
+      color: rgb(231, 220, 220); /* White text color */
+    }
+    h1 {
+      text-align: center;
+      margin: 70px;
+      
+      font-size: 30px;
+      font-family: "Bungee Spice", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    h2{
+      font-family: "Jura", sans-serif ;
+      font-weight: 800;
+    }
+    .example{
+      margin-top: 100px;
+      margin: 100px 20px 0px 20px;
+      color: rgb(197, 109, 109);
+      text-align: center;
+      font-size: large;
+      font-weight: 800;
+    }.bottom{
+      margin-top: 30vh;
+      text-align: center;
+      color: rgb(0, 0, 0);
+      font-weight: 600;
+    }
+    .main_text{
+      margin-top: 20px;
+     padding-top: 40px;
+      font-size: 25px;
+    
+    }
+    .imag{
+      width: ;
+        height: 400px;
+        
+        display: block;
+        aspect-ratio: 1 / 1; /* Ensures the image remains square */
+        object-fit: fill;
+        margin: 0 auto;
+        box-shadow: -1px 1px 10px;
+    }span{
+      font-size: 30px;
+    }
+    .unitysymbol{
+      margin-top: 60px;
+      border-radius: 25px;
+      box-shadow: -1px 1px 10px;
+    }
+    .ans{
+      margin-top: 50px;
+      text-align: center;
+    }</style>
+    <div class="container">
+      <div class="slider">
+         <div class="slides">
+          <div class="inner">
+            <h1>select a number between 01 to 100</h1>
+            <h2>{ for example : 07 }</h2>
+            <p class="bottom">[ if selected please click next to continue ]</p>
+          </div>
+        </div> 
+        <div class="slides">
+          <div class="inner">
+            <h2 class="main_text">
+              Now take another number which is reverse of your selected number
+            </h2>
+            <p class="example">
+              { for example if your number is 07 then your another number will
+              be 70 ( 07=>70) }
+            </p>
+
+            <p class="bottom">[ if done please click next ]</p>
+          </div> 
+        </div>
+        <div class="slides"><div class="inner">
+          <h2 class="main_text">now subtract the smaller number from the bigger number
+            
+          </h2>
+          <h2 class="main_text">Remember your resultant number </h2>
+          <p class="example"> { like ( 70-07 = 63 ) and your resultant number is 63 }</p>
+        </div></div> 
+        <div class="slides">
+          <div class="inner">
+            <h2 class="main_text"> now find your resultant number in the given chart and Remember the respected symbol </h2>
+          <img  class="imag" src="symbols_img.png" alt=""> 
+          </div>
+        </div> 
+        <div class="slides"><div class="inner">
+          <h2 class="main_text" > <span>Hey ! </span>you got this symbol </h2>
+          <img class="unitysymbol" src="unitysymbol.png" alt="">
+          <h1>The symbol of unity</h1>
+          
+        </div>
+
+        </div>
+        
+      </div>
+    </div>
+    <div class="buttons">
+      <div class="back"><button>back</button></div>
+      <div class="next"><button>next</button></div>
+    </div>
+
+    <script >const next = document.querySelector(".next button");
+      const back = document.querySelector(".back button");
+      const slider = document.querySelector(".slider");
+      const slides = document.querySelectorAll(".slides");
+      const totalSlides = slides.length;
+      
+      let currentIndex = 0;
+      
+      function updateSliderPosition() {
+        const slideWidth = slides[0].clientWidth;
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+      
+        // Check if it's the last slide
+        if (currentIndex === totalSlides - 1) {
+          next.innerText = "Home";
+          next.addEventListener("click", goToHome);
+        } else {
+          next.innerText = "Next";
+          next.removeEventListener("click", goToHome);
+        }
+      }
+      
+      function goToHome() {
+        window.location.href = "index.html"; // Replace with your index file path
+      }
+      
+      next.addEventListener("click", () => {
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+          updateSliderPosition();
+        } else {
+          goToHome();
+        }
+      });
+      
+      back.addEventListener("click", () => {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateSliderPosition();
+        }
+      });
+      
+      window.addEventListener("resize", updateSliderPosition);
+      </script>
+  </body>
+  <footer>
+    <div class="ans">
+      <a href="https://www.linkedin.com/in/muhammed-farhan-syed">designed by Syed Muhammed Farhan</a>
+    </div>
+  </footer>
+</html>
